@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController,UIPickerViewDataSource {
+class ViewController: UIViewController {
    
     
     
@@ -19,6 +19,10 @@ class ViewController: UIViewController,UIPickerViewDataSource {
         
     }
     
+    
+}
+
+extension ViewController:UIPickerViewDataSource {
     //deciding number of columns
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -29,7 +33,6 @@ class ViewController: UIViewController,UIPickerViewDataSource {
         return coinManager.currencyArray.count
     }
 }
-
 
 extension ViewController:UIPickerViewDelegate {
     //deciding the elements in the rows
